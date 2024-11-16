@@ -1,10 +1,12 @@
 <template>
   <div class="about">
-    <div style="display: flex; flex-direction: column">
+    <div class="about-content">
       <h1>This is an about page</h1>
 
       <h1>{{ count }}</h1>
-      <button @click="useCounterStore().increment()">Click</button>
+      <button class="test-button" @click="useCounterStore().increment()">
+        Click here
+      </button>
     </div>
   </div>
 </template>
