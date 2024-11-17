@@ -18,7 +18,7 @@ import { useCounterStore } from "@/stores/counter";
 const { count } = storeToRefs(useCounterStore());
 </script>
 
-<style>
+<!-- <style>
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
@@ -26,4 +26,4 @@ const { count } = storeToRefs(useCounterStore());
     align-items: center;
   }
 }
-</style>
+</style> -->
