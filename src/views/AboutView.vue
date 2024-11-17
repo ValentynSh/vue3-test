@@ -5,7 +5,7 @@
 
       <h1>{{ count }}</h1>
       <button class="test-button" @click="useCounterStore().increment()">
-        Click here
+        Click +
       </button>
     </div>
   </div>

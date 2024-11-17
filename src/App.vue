@@ -4,23 +4,33 @@ import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <header>
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
+  <div class="layout-container">
+    <header>
+      <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
-    <div class="wrapper">
-      <HelloWorld :msg="'You did it!'" />
+      <div class="wrapper">
+        <HelloWorld :msg="'Some Page name'" />
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
+        </nav>
+      </div>
+    </header>
+    <div class="content">
+      <RouterView />
     </div>
-  </header>
-
-  <RouterView />
+  </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  min-height: 100vh;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -32,10 +42,10 @@ header {
 }
 
 nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+  //   width: 100%;
+  //   font-size: 12px;
+  //   text-align: center;
+  // margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -57,12 +67,6 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
   .logo {
     margin: 0 2rem 0 0;
   }
@@ -73,13 +77,13 @@ nav a:first-of-type {
     flex-wrap: wrap;
   }
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
+  // nav {
+  //   text-align: left;
+  //   margin-left: -1rem;
+  //   font-size: 1rem;
 
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+  //   padding: 1rem 0;
+  //   margin-top: 1rem;
+  // }
 }
 </style>
