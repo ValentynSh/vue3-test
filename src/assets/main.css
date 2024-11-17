@@ -1,7 +1,9 @@
 @import './base.css';
+@import './styles.scss';
 
 #app {
   max-width: 1280px;
+  flex: 1;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
@@ -28,8 +30,8 @@ a,
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     padding: 0 2rem;
   }
 }
